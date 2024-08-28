@@ -70,7 +70,7 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
     /**
      * @implSpec Closes inputStream
      */
-    private static String[] @NonNull [] readRows(InputStream inputStream,
+    private static String[]  [] readRows(InputStream inputStream,
                                                  Charset charset,
                                                  CsvParserSettings csvParserSettings) throws IOException {
         try (Reader inputReader = new InputStreamReader(inputStream, charset)) {
@@ -97,12 +97,12 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
 
     @Override
     public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn,
-                                 Predicate<@Nullable Object> cellValuePredicate) {
+                                 Predicate< Object> cellValuePredicate) {
         return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
     }
 
     @Override
-    public @Nullable CsvTableRow getRow(int i) {
+    public  CsvTableRow getRow(int i) {
         return (i < 0 || i >= rows.length) ? null : CsvTableRow.of(rows[i], i);
     }
 
