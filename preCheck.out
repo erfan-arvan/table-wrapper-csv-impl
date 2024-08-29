@@ -1,0 +1,43 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.spacious-team:table-wrapper-csv-impl >--------------
+[INFO] Building Table Wrapper API CSV Implementation 2022.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-csv-impl ---
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 8 source files with javac [forked debug target 11] to target/classes
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[41,19] [return] incompatible types in return.
+  type of expression: null (NullType)
+  method return type: @Initialized @NonNull CsvTableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[48,32] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable String
+  method return type: @Initialized @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[56,37] [override.param] Incompatible parameter type for obj.
+  found   : @Initialized @NonNull Object
+  required: @Initialized @Nullable Object
+  Consequence: method in @Initialized @NonNull RowAndIndex
+    @Initialized @NonNull boolean equals(@Initialized @NonNull RowAndIndex this, @Initialized @NonNull Object p0)
+  cannot override method in @Initialized @NonNull Object
+    @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[63,29] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting checkIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[63,51] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.checkIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[63,80] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[63,98] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[68,44] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,34] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable CsvTableRow
+  method return type: @Initialized @NonNull CsvTableRow
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[31,56] [assignment] incompatible types in assignment.
+  found   : null (NullType)
+  required: @Initialized @NonNull DateTimeFormatter
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.507 s
+[INFO] Finished at: 2024-08-26T04:21:27-04:00
+[INFO] ------------------------------------------------------------------------
