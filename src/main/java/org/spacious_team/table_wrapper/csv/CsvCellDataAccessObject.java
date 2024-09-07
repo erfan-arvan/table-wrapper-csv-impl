@@ -52,13 +52,13 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<String, Csv
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public java.lang.String toString() {
         return "CsvCellDataAccessObject(instantParser=" + this.instantParser + ")";
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof CsvCellDataAccessObject)) return false;
@@ -70,13 +70,13 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<String, Csv
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof CsvCellDataAccessObject;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -85,12 +85,12 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<String, Csv
         return result;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     private CsvCellDataAccessObject(final InstantParser instantParser) {
         this.instantParser = instantParser;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public static CsvCellDataAccessObject of(final InstantParser instantParser) {
         return new CsvCellDataAccessObject(instantParser);
     }
