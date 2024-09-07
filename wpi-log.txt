@@ -1,98 +1,79 @@
-+ PROJECT_PATH=../dataset/pre_wpi_with_s_table-wrapper-csv-impl
++ PROJECT_PATH=../dataset/table-wrapper-csv-impl
 + CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
-+ COMPILED_CLASSES_FOLDER=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classes
-+ LIB_FOLDER=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib
-+ SRC_FILES=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/cf_srcs.txt
-+ CLASSPATH_DIR=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ COMPILED_CLASSES_FOLDER=../dataset/table-wrapper-csv-impl/classes
++ LIB_FOLDER=../dataset/table-wrapper-csv-impl/lib
++ SRC_FILES=../dataset/table-wrapper-csv-impl/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/table-wrapper-csv-impl/classpath
 + echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
 CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
-+ unzip_jars ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
-+ local lib_folder=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib
-+ local extract_to=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
-+ '[' -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath ']'
-+ rm -rf ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
-+ mkdir -p ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip_jars ../dataset/table-wrapper-csv-impl/lib ../dataset/table-wrapper-csv-impl/classpath
++ local lib_folder=../dataset/table-wrapper-csv-impl/lib
++ local extract_to=../dataset/table-wrapper-csv-impl/classpath
++ '[' -d ../dataset/table-wrapper-csv-impl/classpath ']'
++ rm -rf ../dataset/table-wrapper-csv-impl/classpath
++ mkdir -p ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/apiguardian-api-1.1.2.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/apiguardian-api-1.1.2.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/byte-buddy-1.12.16.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/byte-buddy-1.12.16.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/byte-buddy-agent-1.12.16.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/byte-buddy-agent-1.12.16.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/checker-qual-3.26.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/checker-qual-3.26.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/junit-jupiter-5.9.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/jsr305-3.0.2.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/junit-jupiter-api-5.9.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/junit-jupiter-5.9.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/junit-jupiter-engine-5.9.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/junit-jupiter-api-5.9.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/junit-jupiter-params-5.9.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/junit-jupiter-engine-5.9.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/junit-platform-commons-1.9.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/junit-jupiter-params-5.9.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/junit-platform-engine-1.9.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/junit-platform-commons-1.9.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/lombok-1.18.24.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/junit-platform-engine-1.9.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/mockito-core-4.8.1.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/lombok-1.18.24.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/mockito-junit-jupiter-4.8.1.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/mockito-core-4.8.1.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/objenesis-3.2.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/mockito-junit-jupiter-4.8.1.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/opentest4j-1.2.0.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/objenesis-3.2.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/table-wrapper-api-791d437bdf.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/opentest4j-1.2.0.jar -d ../dataset/table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/lib/univocity-parsers-2.9.1.jar -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath
-+ find ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src -name '*.java'
-+ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classes -cp ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath @../dataset/pre_wpi_with_s_table-wrapper-csv-impl/cf_srcs.txt'
-+ CLEAN_CMD='rm -rf ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classes'
-+ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classes -cp ../dataset/pre_wpi_with_s_table-wrapper-csv-impl/classpath @../dataset/pre_wpi_with_s_table-wrapper-csv-impl/cf_srcs.txt
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 57,col 5): Constructor <init>(DateTimeFormatter) not found in type org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 53,col 5): Method setCellDataAccessObject(CellDataAccessObject) not found in type org.spacious_team.table_wrapper.csv.CsvTable
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 35,col 5): Method of(String[],int,CsvCellDataAccessObject) not found in type org.spacious_team.table_wrapper.csv.CsvTableCell
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 45,col 5): Constructor <init>(RowAndIndex,CsvCellDataAccessObject) not found in type org.spacious_team.table_wrapper.csv.CsvTableCell
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 116,col 5): Method canEqual(Object) not found in type org.spacious_team.table_wrapper.csv.CsvTableCell
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 130,col 5): Package-private method getRowAndIndex() not found in type org.spacious_team.table_wrapper.csv.CsvTableCell
-  If the method is not package-private, add an access specifier in the stub file and use -AstubDebug to receive a more useful error message.
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 88,col 9): Constructor <init>(String[],int) not found in type org.spacious_team.table_wrapper.csv.CsvTableCell.RowAndIndex
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 94,col 9): Method getColumnIndex() not found in type org.spacious_team.table_wrapper.csv.CsvTableCell.RowAndIndex
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/pre_wpi_with_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 107,col 5): Method canEqual(Object) not found in type org.spacious_team.table_wrapper.csv.CsvTableRow
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/test/java/org/spacious_team/table_wrapper/csv/CsvTableCellTest.java:32: error: constructor RowAndIndex in class RowAndIndex cannot be applied to given types;
-        CsvTableCell.RowAndIndex rowAndIndex = new CsvTableCell.RowAndIndex(row, colNum);
-                                               ^
-  required: no arguments
-  found: String[],int
-  reason: actual and formal argument lists differ in length
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:30: error: CsvTableRow is not abstract and does not override abstract method getRowNum() in ReportPageRow
-public class CsvTableRow extends AbstractReportPageRow {
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/table-wrapper-api-791d437bdf.jar -d ../dataset/table-wrapper-csv-impl/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/table-wrapper-csv-impl/lib/univocity-parsers-2.9.1.jar -d ../dataset/table-wrapper-csv-impl/classpath
++ find ../dataset/table-wrapper-csv-impl/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/table-wrapper-csv-impl/classes -cp ../dataset/table-wrapper-csv-impl/classpath @../dataset/table-wrapper-csv-impl/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/table-wrapper-csv-impl/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/table-wrapper-csv-impl/classes -cp ../dataset/table-wrapper-csv-impl/classpath @../dataset/table-wrapper-csv-impl/cf_srcs.txt
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:38: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvReportPage
+public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
        ^
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:37: error: constructor RowAndIndex in class RowAndIndex cannot be applied to given types;
-        return new CsvTableCell(new RowAndIndex(row, columnIndex));
-                                ^
-  required: no arguments
-  found: String[],int
-  reason: actual and formal argument lists differ in length
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:47: error: cannot find symbol
-        return rowAndIndex.getColumnIndex();
-                          ^
-  symbol:   method getColumnIndex()
-  location: variable rowAndIndex of type RowAndIndex
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:52: error: variable row not initialized in the default constructor
-        private final String[] row;
-                               ^
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:54: error: variable columnIndex not initialized in the default constructor
-        private final int columnIndex;
-                          ^
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:32: error: CsvTable is not abstract and does not override abstract method getCellDataAccessObject() in AbstractTable
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:25: error: duplicate class: org.spacious_team.table_wrapper.csv.DateTimeFormatParser
+class DateTimeFormatParser {
+^
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTable
 public class CsvTable extends AbstractTable<CsvTableRow> {
        ^
-../dataset/pre_wpi_with_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:40: error: cannot find symbol
-        return row.getCell(cellIndex).getRowAndIndex();
-                                     ^
-  symbol:   method getRowAndIndex()
-  location: class CsvTableCell
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableHelper.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableHelper
+class CsvTableHelper {
+^
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:25: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableCell
+public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
+       ^
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableFactory.java:28: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableFactory
+public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
+       ^
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:27: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvTableRow
+public class CsvTableRow extends AbstractReportPageRow {
+       ^
+../dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:29: error: duplicate class: org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject
+public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex, CsvTableRow> {
+       ^
 8 errors
-9 warnings

@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.CellDataAccessObject;
 import org.spacious_team.table_wrapper.csv.CsvTableCell.RowAndIndex;
 import java.time.Instant;
@@ -28,6 +28,7 @@ import java.time.format.DateTimeFormatter;
 
 public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex, CsvTableRow> {
     public static final CsvCellDataAccessObject INSTANCE = new CsvCellDataAccessObject();
+    
     public static DateTimeFormatter dateTimeFormatter = null;
 
     @Override
@@ -48,12 +49,12 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
         return dateTime.atZone(ZoneOffset.systemDefault()).toInstant();
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public static void setDateTimeFormatter(final DateTimeFormatter dateTimeFormatter) {
         CsvCellDataAccessObject.dateTimeFormatter = dateTimeFormatter;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public static DateTimeFormatter getDateTimeFormatter() {
         return CsvCellDataAccessObject.dateTimeFormatter;
     }

@@ -38,10 +38,8 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
         return row.getCell(cellIndex).getRowAndIndex();
     }
 
-    @org.checkerframework.framework.qual.RequiresQualifier(expression = { "org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter" }, qualifier = org.checkerframework.checker.nullness.qual.Nullable.class)
-    @org.checkerframework.framework.qual.EnsuresQualifier(expression = { "org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter" }, qualifier = org.checkerframework.checker.nullness.qual.Nullable.class)
-    @org.checkerframework.dataflow.qual.Pure
-    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String getValue(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CsvCellDataAccessObject this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull RowAndIndex cell) {
+    @org.checkerframework.dataflow.qual.Impure
+    public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull String getValue(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CsvCellDataAccessObject this, @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull RowAndIndex cell) {
         return cell.getValue();
     }
 
@@ -53,14 +51,11 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
         return dateTime.atZone(ZoneOffset.systemDefault()).toInstant();
     }
 
-    @org.checkerframework.checker.nullness.qual.EnsuresNonNull({ "org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter" })
-    @org.checkerframework.framework.qual.EnsuresQualifier(expression = { "org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter" }, qualifier = org.checkerframework.checker.initialization.qual.Initialized.class)
     @org.checkerframework.dataflow.qual.Impure
     public static void setDateTimeFormatter(final DateTimeFormatter dateTimeFormatter) {
         CsvCellDataAccessObject.dateTimeFormatter = dateTimeFormatter;
     }
 
-    @org.checkerframework.framework.qual.EnsuresQualifier(expression = { "org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter" }, qualifier = org.checkerframework.checker.nullness.qual.Nullable.class)
     @org.checkerframework.dataflow.qual.Pure
     public static DateTimeFormatter getDateTimeFormatter() {
         return CsvCellDataAccessObject.dateTimeFormatter;

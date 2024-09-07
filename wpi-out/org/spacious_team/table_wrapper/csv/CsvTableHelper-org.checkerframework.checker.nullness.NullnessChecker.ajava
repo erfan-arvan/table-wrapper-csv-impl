@@ -57,7 +57,7 @@ class CsvTableHelper {
         return NOT_FOUND;
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Pure
     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Predicate<String> equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Object expected) {
         if (expected == null) {
             return Objects::isNull;

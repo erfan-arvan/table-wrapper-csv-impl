@@ -17,7 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 import org.spacious_team.table_wrapper.api.AbstractReportPage;
@@ -76,7 +76,7 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
         return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
     }
 
-    @Override
+     @Override
     public CsvTableRow getRow(int i) {
         return (i >= rows.length) ? null : new CsvTableRow(rows[i], i);
     }

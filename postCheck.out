@@ -6,44 +6,44 @@
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-csv-impl ---
-[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/resources
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/resources
 [INFO] 
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 8 source files with javac [forked debug target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[39,11] [override.return] Incompatible return type.
-  found   : @Initialized @Nullable CsvTableCell
-  required: @Initialized @NonNull TableCell
-  Consequence: method in @Initialized @NonNull CsvTableRow
-    @Initialized @Nullable CsvTableCell getCell(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull int p0)
-  cannot override method in @Initialized @NonNull ReportPageRow
-    @Initialized @NonNull TableCell getCell(@Initialized @NonNull ReportPageRow this, @Initialized @NonNull int p0)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[76,30] [return] incompatible types in return.
-  type of expression: @Initialized @Nullable CsvTableCell
-  method return type: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[80,11] [override.return] Incompatible return type.
-  found   : @Initialized @Nullable CsvTableRow
-  required: @Initialized @NonNull CsvTableRow
-  Consequence: method in @Initialized @NonNull CsvReportPage
-    @Initialized @Nullable CsvTableRow getRow(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0)
-  cannot override method in @Initialized @NonNull AbstractReportPage<@Initialized @NonNull CsvTableRow>
-    @Initialized @NonNull CsvTableRow getRow(@Initialized @NonNull AbstractReportPage<@Initialized @NonNull CsvTableRow> this, @Initialized @NonNull int p0)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[31,16] [dereference.of.nullable] dereference of possibly-null reference dateTime
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[35,26] [dereference.of.nullable] dereference of possibly-null reference row.getCell(cellIndex)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[39,11] [override.return] Incompatible return type.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[36,26] [dereference.of.nullable] dereference of possibly-null reference row.getCell(cellIndex)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[40,11] [override.return] Incompatible return type.
   found   : @Initialized @Nullable String
   required: @Initialized @NonNull Object
   Consequence: method in @Initialized @NonNull CsvCellDataAccessObject
     @Initialized @Nullable String getValue(@Initialized @NonNull CsvCellDataAccessObject this, @Initialized @NonNull RowAndIndex p0)
   cannot override method in @Initialized @NonNull CellDataAccessObject<@Initialized @NonNull RowAndIndex, @Initialized @NonNull CsvTableRow>
     @Initialized @NonNull Object getValue(@Initialized @NonNull CellDataAccessObject<@Initialized @NonNull RowAndIndex, @Initialized @NonNull CsvTableRow> this, @Initialized @NonNull RowAndIndex p0)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[39,18] [contracts.precondition.override] Subclass precondition is stronger for 'org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter' in getValue.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[40,18] [contracts.precondition.override] Subclass precondition is stronger for 'org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject.class.dateTimeFormatter' in getValue.
     In superclass org.spacious_team.table_wrapper.api.CellDataAccessObject: no information
     In subclass org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject: @Nullable
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/pre_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[47,34] [dereference.of.nullable] dereference of possibly-null reference value
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[48,34] [dereference.of.nullable] dereference of possibly-null reference value
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[39,11] [override.return] Incompatible return type.
+  found   : @Initialized @Nullable CsvTableCell
+  required: @Initialized @NonNull TableCell
+  Consequence: method in @Initialized @NonNull CsvTableRow
+    @Initialized @Nullable CsvTableCell getCell(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull ReportPageRow
+    @Initialized @NonNull TableCell getCell(@Initialized @NonNull ReportPageRow this, @Initialized @NonNull int p0)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[76,30] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable CsvTableCell
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[31,16] [dereference.of.nullable] dereference of possibly-null reference dateTime
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[80,11] [override.return] Incompatible return type.
+  found   : @Initialized @Nullable CsvTableRow
+  required: @Initialized @NonNull CsvTableRow
+  Consequence: method in @Initialized @NonNull CsvReportPage
+    @Initialized @Nullable CsvTableRow getRow(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0)
+  cannot override method in @Initialized @NonNull AbstractReportPage<@Initialized @NonNull CsvTableRow>
+    @Initialized @NonNull CsvTableRow getRow(@Initialized @NonNull AbstractReportPage<@Initialized @NonNull CsvTableRow> this, @Initialized @NonNull int p0)
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.452 s
-[INFO] Finished at: 2024-08-26T04:21:52-04:00
+[INFO] Total time:  2.506 s
+[INFO] Finished at: 2024-09-06T22:44:14-04:00
 [INFO] ------------------------------------------------------------------------

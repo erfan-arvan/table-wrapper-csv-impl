@@ -17,7 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.ToString;

@@ -78,7 +78,7 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
         return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
     }
 
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     public  CsvTableRow getRow( CsvReportPage this,   int i) {
         return (i >= rows.length) ? null : new CsvTableRow(rows[i], i);
     }

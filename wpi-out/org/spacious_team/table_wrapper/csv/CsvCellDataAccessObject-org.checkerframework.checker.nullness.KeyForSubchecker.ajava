@@ -38,7 +38,7 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
         return row.getCell(cellIndex).getRowAndIndex();
     }
 
-    @org.checkerframework.dataflow.qual.Pure
+    @org.checkerframework.dataflow.qual.Impure
     public  String getValue( CsvCellDataAccessObject this,  RowAndIndex cell) {
         return cell.getValue();
     }

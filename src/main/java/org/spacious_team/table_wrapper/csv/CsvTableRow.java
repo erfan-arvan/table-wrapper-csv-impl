@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractReportPageRow;
 import org.spacious_team.table_wrapper.api.TableCell;
 import java.util.Iterator;
@@ -35,7 +35,7 @@ public class CsvTableRow extends AbstractReportPageRow {
         this.cellsCache = new CsvTableCell[row.length];
     }
 
-    @Override
+     @Override
     public CsvTableCell getCell(int i) {
         if (i >= row.length) {
             return null;
@@ -67,18 +67,18 @@ public class CsvTableRow extends AbstractReportPageRow {
     public Iterator<TableCell> iterator() {
         return new Iterator<>() {
             private int cellIndex = 0;
-            @Override
+             @Override
             public boolean hasNext() {
                 return cellIndex < row.length;
             }
-            @Override
+             @Override
             public TableCell next() {
                 return getCell(cellIndex++);
             }
         };
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getRowNum() {
         return this.rowNum;
     }

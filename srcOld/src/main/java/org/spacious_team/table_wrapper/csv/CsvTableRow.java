@@ -17,7 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import lombok.Getter;
 import org.spacious_team.table_wrapper.api.AbstractReportPageRow;
 import org.spacious_team.table_wrapper.api.TableCell;

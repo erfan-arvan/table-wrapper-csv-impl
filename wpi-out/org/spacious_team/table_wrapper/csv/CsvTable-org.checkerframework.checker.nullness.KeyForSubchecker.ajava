@@ -40,12 +40,12 @@ public class CsvTable extends AbstractTable<CsvTableRow> {
         super(table, appendDataRowsToTop, appendDataRowsToBottom);
     }
 
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     public  Table subTable( CsvTable this,   int topRows,   int bottomRows) {
         return new CsvTable(this, topRows, bottomRows);
     }
 
-    @org.checkerframework.dataflow.qual.SideEffectFree
+    @org.checkerframework.dataflow.qual.Impure
     public java.lang.String toString() {
         return "CsvTable(super=" + super.toString() + ", cellDataAccessObject=" + this.getCellDataAccessObject() + ")";
     }

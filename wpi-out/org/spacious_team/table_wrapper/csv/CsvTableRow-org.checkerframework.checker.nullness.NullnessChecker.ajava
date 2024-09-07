@@ -72,15 +72,13 @@ public class CsvTableRow extends AbstractReportPageRow {
     public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Iterator<TableCell> iterator(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull CsvTableRow this) {
         return new Iterator<>() {
 
-            private  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull int cellIndex = 0;
+            private int cellIndex = 0;
 
-            @org.checkerframework.dataflow.qual.Pure
-            public  @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull boolean hasNext() {
+            public boolean hasNext() {
                 return cellIndex < row.length;
             }
 
-            @org.checkerframework.dataflow.qual.Impure
-            public @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable TableCell next() {
+            public TableCell next() {
                 return getCell(cellIndex++);
             }
         };
