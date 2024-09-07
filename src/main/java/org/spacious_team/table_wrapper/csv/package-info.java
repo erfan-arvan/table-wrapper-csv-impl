@@ -1,5 +1,5 @@
 /*
- * Table Wrapper CSV Impl
+ * Table Wrapper API
  * Copyright (C) 2022  Spacious Team <spacious-team@ya.ru>
  *
  * This program is free software: you can redistribute it and/or modify
