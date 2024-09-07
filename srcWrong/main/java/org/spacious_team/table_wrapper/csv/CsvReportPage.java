@@ -20,6 +20,7 @@ package org.spacious_team.table_wrapper.csv;
 
 import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
+import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractReportPage;
 import org.spacious_team.table_wrapper.api.TableCellAddress;
@@ -41,19 +42,41 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
     private final String[][] rows;
 
     /**
-     * Field and line delimiter detected automatically. UTF-8 encoding file expected.
+     * Field and line delimiter detected automatically. UTF-8 encoded file expected.
      */
     public CsvReportPage(Path path) throws IOException {
-        this(Files.newInputStream(path, StandardOpenOption.READ), UTF_8, getDefaultCsvParserSettings());
+        try (InputStream inputStream = Files.newInputStream(path, StandardOpenOption.READ)) {
+            this.rows = readRows(inputStream, UTF_8, getDefaultCsvParserSettings());
+        }
     }
 
     /**
-     * Closes inputStream if success
+     * Field and line delimiter detected automatically. UTF-8 encoded file expected.
+     *
+     * @implSpec Does not close inputStream
+     */
+    public CsvReportPage(InputStream inputStream) throws IOException {
+        this(inputStream, UTF_8, getDefaultCsvParserSettings());
+    }
+
+    /**
+     * @implSpec Does not close inputStream
      */
     public CsvReportPage(InputStream inputStream, Charset charset, CsvParserSettings csvParserSettings) throws IOException {
+        CloseIgnoringInputStream closeIgnoringInputStream = new CloseIgnoringInputStream(inputStream);
+        this.rows = readRows(closeIgnoringInputStream, charset, csvParserSettings);
+    }
+
+    /**
+     * @implSpec Closes inputStream
+     */
+    private static String[]  [] readRows(InputStream inputStream,
+                                                 Charset charset,
+                                                 CsvParserSettings csvParserSettings) throws IOException {
         try (Reader inputReader = new InputStreamReader(inputStream, charset)) {
             CsvParser parser = new CsvParser(csvParserSettings);
-            rows = parser.parseAll(inputReader).toArray(new String[0][]);
+            return parser.parseAll(inputReader)
+                    .toArray(new String[0][]);
         }
     }
 
@@ -73,13 +96,14 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
     }
 
     @Override
-    public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn, Predicate<Object> cellValuePredicate) {
+    public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn,
+                                 Predicate< Object> cellValuePredicate) {
         return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
     }
 
     @Override
     public  CsvTableRow getRow(int i) {
-        return (i >= rows.length) ? null : new CsvTableRow(rows[i], i);
+        return (i < 0 || i >= rows.length) ? null : CsvTableRow.of(rows[i], i);
     }
 
     @Override
