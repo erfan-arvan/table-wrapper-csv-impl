@@ -78,7 +78,7 @@ public class CsvTableRow extends AbstractReportPageRow {
         };
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getRowNum() {
         return this.rowNum;
     }
