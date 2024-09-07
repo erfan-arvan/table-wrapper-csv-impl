@@ -20,12 +20,21 @@
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [assignment] incompatible types in assignment.
   found   : @Initialized @Nullable DateTimeFormatter
   required: @UnknownInitialization @NonNull DateTimeFormatter
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[82,34] [return] incompatible types in return.
-  type of expression: @Initialized @Nullable CsvTableRow
-  method return type: @Initialized @NonNull CsvTableRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[44,19] [return] incompatible types in return.
-  type of expression: null (NullType)
-  method return type: @Initialized @NonNull CsvTableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,24] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[81,24] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[42,24] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,19] [override.return] Incompatible return type.
+  found   : @Initialized @Nullable TableCell
+  required: @Initialized @NonNull TableCell
+  Consequence: method in @Initialized @NonNull CsvTableRow.@Initialized @NonNull <anonymous org.spacious_team.table_wrapper.csv.CsvTableRow$1>
+    @Initialized @Nullable TableCell next(@Initialized @NonNull CsvTableRow.@Initialized @NonNull <anonymous org.spacious_team.table_wrapper.csv.CsvTableRow$1> this)
+  cannot override method in @Initialized @NonNull Iterator<@Initialized @NonNull TableCell>
+    @Initialized @NonNull TableCell next(@Initialized @NonNull Iterator<@Initialized @NonNull TableCell> this)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[79,29] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[90,49] [override.param] Incompatible parameter type for o.
   found   : @Initialized @NonNull Object
   required: @Initialized @Nullable Object
@@ -37,9 +46,6 @@
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,26] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,47] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowNum not allowed in deterministic side-effect-free method
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[110,48] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[58,32] [return] incompatible types in return.
-  type of expression: @Initialized @Nullable String
-  method return type: @Initialized @NonNull String
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[66,38] [override.param] Incompatible parameter type for obj.
   found   : @Initialized @NonNull Object
   required: @Initialized @Nullable Object
@@ -63,19 +69,23 @@
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[100,69] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[101,71] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowAndIndex not allowed in deterministic side-effect-free method
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[116,65] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[41,13] [argument] incompatible argument for parameter dateTimeFormatter of CsvCellDataAccessObject constructor.
-  found   : null (NullType)
-  required: @Initialized @NonNull DateTimeFormatter
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[41,19] [argument] incompatible argument for parameter defaultZone of CsvCellDataAccessObject constructor.
-  found   : null (NullType)
-  required: @Initialized @NonNull ZoneId
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[53,30] [return] incompatible types in return.
-  type of expression: @Initialized @Nullable RowAndIndex
-  method return type: @Initialized @NonNull RowAndIndex
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[37,47] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private, final]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[38,36] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [private, final]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[51,24] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[52,40] [assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable CsvTableCell
+  required: @UnknownInitialization @NonNull CsvTableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [type.anno.before.decl.anno] write type annotations [@Nullable()] immediately before type, after declaration annotation @Override()
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [type.anno.before.modifier] write type annotation @Nullable() immediately before type, after modifiers [public]
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[63,32] [assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable String
+  required: @UnknownInitialization @NonNull String
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/dataset/post_wpi_without_s/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:[47,110] [purity.not.sideeffectfree.call] call to side-effecting this.getCellDataAccessObject not allowed in side-effect-free method
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.813 s
-[INFO] Finished at: 2024-09-07T00:07:30-04:00
+[INFO] Total time:  2.841 s
+[INFO] Finished at: 2024-09-07T00:19:16-04:00
 [INFO] ------------------------------------------------------------------------

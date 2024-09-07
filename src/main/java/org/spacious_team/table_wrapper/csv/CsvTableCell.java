@@ -53,8 +53,8 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
         private final String[] row;
         private final int columnIndex;
 
-        
-        String getValue() {
+
+        @Nullable String getValue() {
             return checkIndex() ? row[columnIndex] : null;
         }
 

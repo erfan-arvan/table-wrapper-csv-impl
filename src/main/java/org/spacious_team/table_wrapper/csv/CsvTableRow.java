@@ -37,7 +37,7 @@ public class CsvTableRow extends AbstractReportPageRow {
         this.cellsCache = new CsvTableCell[row.length];
     }
 
-    @Override
+    @Nullable @Override
     
     public CsvTableCell getCell(int i) {
         if (i >= row.length) {
@@ -74,7 +74,7 @@ public class CsvTableRow extends AbstractReportPageRow {
             public boolean hasNext() {
                 return cellIndex < row.length;
             }
-            @Override
+            @Nullable @Override
             
             public TableCell next() {
                 if (hasNext()) {
