@@ -78,7 +78,7 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
     }
 
     @Override
-    public  CsvTableRow getRow(int i) {
+    public @Nullable CsvTableRow getRow(int i) {
         return (i >= rows.length) ? null : new CsvTableRow(rows[i], i);
     }
 

@@ -1,0 +1,40 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.spacious-team:table-wrapper-csv-impl >--------------
+[INFO] Building Table Wrapper API CSV Implementation 2022.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.8:prepare-agent (prepare-agent) @ table-wrapper-csv-impl ---
+[INFO] argLine set to -javaagent:/Users/erfanarvan/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-csv-impl ---
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 9 source files with javac [forked debug target 11] to target/classes
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[81,34] [return] incompatible types in return.
+  type of expression: @Initialized @Nullable CsvTableCell
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[52,40] [assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable CsvTableCell
+  required: @UnknownInitialization @NonNull CsvTableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [contracts.precondition.override] Subclass precondition is stronger for 'this.dateTimeFormatter' in getValue.
+    In superclass org.spacious_team.table_wrapper.api.CellDataAccessObject: no information
+    In subclass org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject: @Nullable
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[63,32] [assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable String
+  required: @UnknownInitialization @NonNull String
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[88,57] [assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable DateTimeFormatter
+  required: @UnknownInitialization @NonNull DateTimeFormatter
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [assignment] incompatible types in assignment.
+  found   : @Initialized @Nullable DateTimeFormatter
+  required: @UnknownInitialization @NonNull DateTimeFormatter
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.787 s
+[INFO] Finished at: 2024-09-09T01:39:17-04:00
+[INFO] ------------------------------------------------------------------------

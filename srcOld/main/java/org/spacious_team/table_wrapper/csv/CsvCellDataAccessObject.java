@@ -34,33 +34,33 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
     /**
      * If null, date time format is derived from value
      */
-    private final  DateTimeFormatter dateTimeFormatter;
-    private final  ZoneId defaultZone;
+    private final @Nullable DateTimeFormatter dateTimeFormatter;
+    private final @Nullable ZoneId defaultZone;
 
     public CsvCellDataAccessObject() {
         this(null, null);
     }
 
-    public CsvCellDataAccessObject( DateTimeFormatter dateTimeFormatter,
-                                    ZoneId defaultZone) {
+    public CsvCellDataAccessObject(@Nullable DateTimeFormatter dateTimeFormatter,
+                                   @Nullable ZoneId defaultZone) {
         this.dateTimeFormatter = dateTimeFormatter;
         this.defaultZone = defaultZone;
     }
 
     @Override
-    public  RowAndIndex getCell(CsvTableRow row, Integer cellIndex) {
-         CsvTableCell cell = row.getCell(cellIndex);
+    public @Nullable RowAndIndex getCell(CsvTableRow row, Integer cellIndex) {
+        @Nullable CsvTableCell cell = row.getCell(cellIndex);
         return (cell == null) ? null : cell.getRowAndIndex();
     }
 
     @Override
-    public  String getValue(RowAndIndex cell) {
+    public @Nullable String getValue(RowAndIndex cell) {
         return cell.getValue();
     }
 
     @Override
     public Instant getInstantValue(RowAndIndex cell) {
-         String value = getValue(cell);
+        @Nullable String value = getValue(cell);
         Objects.requireNonNull(value, "Not an instant");
         DateTimeFormatter formatter = (dateTimeFormatter != null) ?
                 dateTimeFormatter :
