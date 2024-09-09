@@ -89,7 +89,7 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>3.46.1-SNAPSHOT</version>
+            <version>3.45.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -194,6 +194,13 @@
                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
                 <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
                 <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+                <arg>-AassumePure</arg>
+                <arg>-Adetailedmsgtex</arg>
+                <arg>-AshowPrefixInWarningMessages</arg>
+                <arg>-J-Xmx32G</arg>
+                <arg>-Xmaxerrs</arg>
+                <arg>10000</arg>
+                <arg>-g</arg>
                 <arg>-Ainfer=ajava</arg>
                 <arg>-Awarns</arg>
                 <arg>-AinferOutputOriginal</arg>

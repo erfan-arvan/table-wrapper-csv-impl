@@ -14,68 +14,83 @@
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 9 source files with javac [forked debug target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[82,34] [return] incompatible types in return.
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:[82,34] [nullness:return] incompatible types in return.
   type of expression: @Initialized @Nullable CsvTableRow
   method return type: @Initialized @NonNull CsvTableRow
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[44,19] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[44,19] [nullness:return] incompatible types in return.
   type of expression: null (NullType)
   method return type: @Initialized @NonNull CsvTableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[90,49] [override.param] Incompatible parameter type for o.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[90,49] [nullness:override.param] Incompatible parameter type for o.
   found   : @Initialized @NonNull Object
   required: @Initialized @Nullable Object
   Consequence: method in @Initialized @NonNull CsvTableRow
     @Initialized @NonNull boolean equals(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0)
   cannot override method in @Initialized @NonNull Object
     @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[94,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,26] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,47] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowNum not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[110,48] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[58,32] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[94,27] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[94,27] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,26] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,26] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,47] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[95,47] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[110,48] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[110,48] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowNum not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[58,32] [nullness:return] incompatible types in return.
   type of expression: @Initialized @Nullable String
   method return type: @Initialized @NonNull String
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[66,38] [override.param] Incompatible parameter type for obj.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[66,38] [nullness:override.param] Incompatible parameter type for obj.
   found   : @Initialized @NonNull Object
   required: @Initialized @Nullable Object
   Consequence: method in @Initialized @NonNull RowAndIndex
     @Initialized @NonNull boolean equals(@Initialized @NonNull RowAndIndex this, @Initialized @NonNull Object p0)
   cannot override method in @Initialized @NonNull Object
     @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,29] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting checkIndex not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,51] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.checkIndex not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,80] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,98] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getValue not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[78,44] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[95,49] [override.param] Incompatible parameter type for o.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,29] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting checkIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,29] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting checkIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,51] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.checkIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,51] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.checkIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,80] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,80] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,98] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[73,98] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[78,44] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[78,44] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting getValue not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[95,49] [nullness:override.param] Incompatible parameter type for o.
   found   : @Initialized @NonNull Object
   required: @Initialized @Nullable Object
   Consequence: method in @Initialized @NonNull CsvTableCell
     @Initialized @NonNull boolean equals(@Initialized @NonNull CsvTableCell this, @Initialized @NonNull Object p0)
   cannot override method in @Initialized @NonNull Object
     @Initialized @NonNull boolean equals(@Initialized @NonNull Object this, @Initialized @Nullable Object p0)
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[99,27] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[100,69] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[101,71] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowAndIndex not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[116,65] [purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[41,13] [argument] incompatible argument for parameter dateTimeFormatter of CsvCellDataAccessObject constructor.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[99,27] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[99,27] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.canEqual not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[100,69] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[100,69] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[101,71] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowAndIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[101,71] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting other.getRowAndIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[116,65] [keyfor:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:[116,65] [nullness:purity.not.deterministic.not.sideeffectfree.call] call to non-deterministic side-effecting this.getRowAndIndex not allowed in deterministic side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[41,13] [nullness:argument] incompatible argument for parameter dateTimeFormatter of CsvCellDataAccessObject constructor.
   found   : null (NullType)
   required: @Initialized @NonNull DateTimeFormatter
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[41,19] [argument] incompatible argument for parameter defaultZone of CsvCellDataAccessObject constructor.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[41,19] [nullness:argument] incompatible argument for parameter defaultZone of CsvCellDataAccessObject constructor.
   found   : null (NullType)
   required: @Initialized @NonNull ZoneId
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[53,30] [return] incompatible types in return.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[53,30] [nullness:return] incompatible types in return.
   type of expression: @Initialized @Nullable RowAndIndex
   method return type: @Initialized @NonNull RowAndIndex
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:[47,110] [purity.not.sideeffectfree.call] call to side-effecting this.getCellDataAccessObject not allowed in side-effect-free method
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[88,57] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:[47,110] [keyfor:purity.not.sideeffectfree.call] call to side-effecting this.getCellDataAccessObject not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java:[47,110] [nullness:purity.not.sideeffectfree.call] call to side-effecting this.getCellDataAccessObject not allowed in side-effect-free method
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[88,57] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable DateTimeFormatter
   required: @UnknownInitialization @NonNull DateTimeFormatter
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable DateTimeFormatter
   required: @UnknownInitialization @NonNull DateTimeFormatter
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.806 s
-[INFO] Finished at: 2024-09-09T01:38:49-04:00
+[INFO] Total time:  2.900 s
+[INFO] Finished at: 2024-09-09T14:45:01-04:00
 [INFO] ------------------------------------------------------------------------

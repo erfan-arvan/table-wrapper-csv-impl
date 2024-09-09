@@ -14,27 +14,28 @@
 [INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
 [INFO] Changes detected - recompiling the module! :source
 [INFO] Compiling 9 source files with javac [forked debug target 11] to target/classes
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[81,34] [return] incompatible types in return.
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[81,34] [nullness:return] incompatible types in return.
   type of expression: @Initialized @Nullable CsvTableCell
   method return type: @Initialized @NonNull TableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[52,40] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[52,40] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable CsvTableCell
   required: @UnknownInitialization @NonNull CsvTableCell
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [contracts.precondition.override] Subclass precondition is stronger for 'this.dateTimeFormatter' in getValue.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[57,19] [nullness:contracts.precondition.override] Subclass precondition is stronger for 'this.dateTimeFormatter' in getValue.
     In superclass org.spacious_team.table_wrapper.api.CellDataAccessObject: no information
     In subclass org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject: @Nullable
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[63,32] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[63,32] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable String
   required: @UnknownInitialization @NonNull String
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[88,57] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[88,57] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable DateTimeFormatter
   required: @UnknownInitialization @NonNull DateTimeFormatter
-[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [assignment] incompatible types in assignment.
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/verify/table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[106,57] [nullness:assignment] incompatible types in assignment.
   found   : @Initialized @Nullable DateTimeFormatter
   required: @UnknownInitialization @NonNull DateTimeFormatter
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.777 s
-[INFO] Finished at: 2024-09-09T01:39:11-04:00
+[INFO] Total time:  2.749 s
+[INFO] Finished at: 2024-09-09T14:45:24-04:00
 [INFO] ------------------------------------------------------------------------
