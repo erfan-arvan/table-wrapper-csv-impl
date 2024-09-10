@@ -1,41 +1,11 @@
-/*
- * Table Wrapper CSV Impl
- * Copyright (C) 2022  Spacious Team <spacious-team@ya.ru>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
-
 package org.spacious_team.table_wrapper.csv;
-
-import lombok.NoArgsConstructor;
-import org.spacious_team.table_wrapper.api.TableCellAddress;
-
-import java.util.Objects;
-import java.util.function.Predicate;
-
-import static lombok.AccessLevel.PRIVATE;
-import static org.spacious_team.table_wrapper.api.TableCellAddress.NOT_FOUND;
-
 @NoArgsConstructor(access = PRIVATE)
 final class CsvTableHelper {
-
     static TableCellAddress find(String[][] table, Object expected,
                                  int startRow, int endRow,
                                  int startColumn, int endColumn) {
         return find(table, startRow, endRow, startColumn, endColumn, equalsPredicate(expected));
     }
-
     static TableCellAddress find(String[][] table, int startRow, int endRow, int startColumn, int endColumn,
                                  Predicate<String> predicate) {
         startRow = Math.max(0, startRow);
@@ -49,7 +19,6 @@ final class CsvTableHelper {
         }
         return NOT_FOUND;
     }
-
     static TableCellAddress find(String[] row, int rowNum, int startColumn, int endColumn, Predicate<String> predicate) {
         startColumn = Math.max(0, startColumn);
         endColumn = Math.min(endColumn, row.length);
@@ -61,8 +30,6 @@ final class CsvTableHelper {
         }
         return NOT_FOUND;
     }
-
-    @SuppressWarnings({"nullness", "ConstantConditions"})
     static Predicate<String> equalsPredicate(Object expected) {
         if (expected == null) {
             return Objects::isNull;
