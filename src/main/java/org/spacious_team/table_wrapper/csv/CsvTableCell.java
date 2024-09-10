@@ -1,66 +1,30 @@
-/*
- * Table Wrapper CSV Impl
- * Copyright (C) 2022  Spacious Team <spacious-team@ya.ru>
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU Affero General Public License as
- * published by the Free Software Foundation, either version 3 of the
- * License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Affero General Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <https://www.gnu.org/licenses/>.
- */
-
 package org.spacious_team.table_wrapper.csv;
-
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.spacious_team.table_wrapper.api.AbstractTableCell;
-
-import java.util.Objects;
-
-import static lombok.AccessLevel.PACKAGE;
-
 @EqualsAndHashCode(of = {"rowAndIndex"}, callSuper = false)
 public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
-
     @Getter(PACKAGE)
     private final RowAndIndex rowAndIndex;
-
     public static CsvTableCell of(String[] row, int columnIndex) {
         return new CsvTableCell(new RowAndIndex(row, columnIndex));
     }
-
     public CsvTableCell(RowAndIndex rowAndIndex) {
         super(rowAndIndex, CsvCellDataAccessObject.INSTANCE);
         this.rowAndIndex = rowAndIndex;
     }
-
     @Override
     public int getColumnIndex() {
         return rowAndIndex.getColumnIndex();
     }
-
     @RequiredArgsConstructor
     static final class RowAndIndex {
         private final String[] row;
         @Getter
         private final int columnIndex;
-
         String getValue() {
             return checkIndex() ? row[columnIndex] : null;
         }
-
         private boolean checkIndex() {
             return columnIndex >= 0 && columnIndex < row.length;
         }
-
         @Override
         public boolean equals(Object obj) {
             if (obj == this) {
@@ -73,7 +37,6 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
                     other.checkIndex() &&
                     Objects.equals(getValue(), other.getValue());
         }
-
         @Override
         public int hashCode() {
             return Objects.hashCode(getValue());
