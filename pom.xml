@@ -51,7 +51,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <lombok.version>1.18.24</lombok.version>
-        <checkerframework.version>3.26.0</checkerframework.version>
     </properties>
 
     <repositories>
@@ -90,8 +89,7 @@
         <dependency>
             <groupId>org.checkerframework</groupId>
             <artifactId>checker-qual</artifactId>
-            <version>${checkerframework.version}</version>
-            <scope>provided</scope> <!-- for static analysis tools only -->
+            <version>3.45.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -122,40 +120,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <fork>true</fork> <!-- Must fork or else JVM arguments are ignored. -->
-                    <showDeprecation>true</showDeprecation>
-                    <showWarnings>true</showWarnings>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </path>
-                        <path>
-                            <groupId>org.checkerframework</groupId>
-                            <artifactId>checker</artifactId>
-                            <version>${checkerframework.version}</version>
-                        </path>
-                    </annotationProcessorPaths>
-                    <annotationProcessors>
-                        <annotationProcessor>
-                            lombok.launch.AnnotationProcessorHider$AnnotationProcessor
-                        </annotationProcessor>
-                        <annotationProcessor>
-                            org.checkerframework.checker.nullness.NullnessChecker
-                        </annotationProcessor>
-                    </annotationProcessors>
-                    <compilerArgs combine.children="append">
-                        <arg>-Awarns</arg>
-                        <arg>-Astubs=jdk.astub</arg>
-                        <arg>-AskipDefs=.*Test</arg>
-                        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-                        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-                    </compilerArgs>
+
                 </configuration>
             </plugin>
             <plugin>
@@ -193,4 +158,55 @@
             </plugin>
         </plugins>
     </build>
+
+        <profiles>
+      <profile>
+      <id>CheckerFramework</id>
+      <!-- If you omit the activation block, run mvn with "-P checkerframework" to run checkers. -->
+      <build>
+          <plugins>
+          <plugin>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.11.0</version>
+              <configuration>
+              <fork>true</fork> <!-- Must fork or else JVM arguments are ignored. -->
+              <annotationProcessorPaths>
+                  <path>
+                  <groupId>org.checkerframework</groupId>
+                  <artifactId>checker</artifactId>
+                  <version>3.45.1-SNAPSHOT</version>
+                  </path>
+              </annotationProcessorPaths>
+              <annotationProcessors>
+                  <!-- Add all the checkers you want to enable here -->
+                  <annotationProcessor>org.checkerframework.checker.nullness.NullnessChecker</annotationProcessor>
+              </annotationProcessors>
+              <compilerArgs>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
+                <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
+                <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
+                <arg>-AassumePure</arg>
+                <arg>-Adetailedmsgtex</arg>
+                <arg>-AshowPrefixInWarningMessages</arg>
+                <arg>-J-Xmx32G</arg>
+                <arg>-Xmaxerrs</arg>
+                <arg>10000</arg>
+                <arg>-g</arg>
+                <arg>-Ainfer=ajava</arg>
+                <arg>-Awarns</arg>
+                <arg>-AinferOutputOriginal</arg>
+                <arg>-Aajava=/tmp/WPITEMP-table-wrapper-csv-impl</arg>
+              </compilerArgs>
+              </configuration>
+          </plugin>
+          </plugins>
+      </build>
+      </profile>
+  </profiles>
 </project>

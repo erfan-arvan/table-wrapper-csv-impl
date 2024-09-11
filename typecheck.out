@@ -1,0 +1,29 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.spacious-team:table-wrapper-csv-impl >--------------
+[INFO] Building Table Wrapper API CSV Implementation 2022.4
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco:0.8.8:prepare-agent (prepare-agent) @ table-wrapper-csv-impl ---
+[INFO] argLine set to -javaagent:/Users/erfanarvan/.m2/repository/org/jacoco/org.jacoco.agent/0.8.8/org.jacoco.agent-0.8.8-runtime.jar=destfile=/Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/target/jacoco.exec
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ table-wrapper-csv-impl ---
+[INFO] skip non existing resourceDirectory /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ table-wrapper-csv-impl ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 8 source files with javac [forked debug target 11] to target/classes
+[WARNING] The following options were not recognized by any processor: '[detailedmsgtex]'
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/DateTimeFormatParser.java:[31,16] [nullness:dereference.of.nullable] dereference of possibly-null reference dateTime
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:[78,34] [nullness:return] incompatible types in return.
+  type of expression: @Initialized @Nullable CsvTableCell
+  method return type: @Initialized @NonNull TableCell
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[38,26] [nullness:dereference.of.nullable] dereference of possibly-null reference row.getCell(cellIndex)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[50,34] [nullness:dereference.of.nullable] dereference of possibly-null reference value
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.756 s
+[INFO] Finished at: 2024-09-10T23:56:54-04:00
+[INFO] ------------------------------------------------------------------------
