@@ -62,7 +62,7 @@ final class CsvTableHelper {
         return expectedString::equals;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     private CsvTableHelper() {
     }
 }

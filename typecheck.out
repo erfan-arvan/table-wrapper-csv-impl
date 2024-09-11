@@ -20,10 +20,13 @@
   type of expression: @Initialized @Nullable CsvTableCell
   method return type: @Initialized @NonNull TableCell
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[38,26] [nullness:dereference.of.nullable] dereference of possibly-null reference row.getCell(cellIndex)
+[WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[42,18] [nullness:contracts.precondition.override] Subclass precondition is stronger for 'this.dateTimeFormatter' in getValue.
+    In superclass org.spacious_team.table_wrapper.api.CellDataAccessObject: no information
+    In subclass org.spacious_team.table_wrapper.csv.CsvCellDataAccessObject: @Nullable
 [WARNING] /Users/erfanarvan/Desktop/comparisonPaper/experiments/tests/new_pre_csv/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:[50,34] [nullness:dereference.of.nullable] dereference of possibly-null reference value
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.756 s
-[INFO] Finished at: 2024-09-10T23:56:54-04:00
+[INFO] Total time:  2.782 s
+[INFO] Finished at: 2024-09-11T00:00:14-04:00
 [INFO] ------------------------------------------------------------------------

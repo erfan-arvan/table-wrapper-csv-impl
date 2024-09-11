@@ -24,7 +24,7 @@ import org.spacious_team.table_wrapper.api.Table;
 import org.spacious_team.table_wrapper.api.TableCellRange;
 import org.spacious_team.table_wrapper.api.TableColumnDescription;
 
-@SuppressWarnings("unused")
+
 public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
 
     public CsvTableFactory() {

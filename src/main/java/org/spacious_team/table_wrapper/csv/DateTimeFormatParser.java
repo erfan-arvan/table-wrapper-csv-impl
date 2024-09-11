@@ -34,7 +34,7 @@ final class DateTimeFormatParser {
     static DateTimeFormatter getForDate(String date) {
         boolean isYearAtFirst;
         char dateSplitter;
-        @SuppressWarnings("DuplicatedCode")
+        
         char ch = date.charAt(date.length() - 5);
         if (!Character.isDigit(ch)) {
             // date format is DD MM YYYY
@@ -130,7 +130,7 @@ final class DateTimeFormatParser {
         format.append("HH:mm:ss");
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     private DateTimeFormatParser() {
     }
 }

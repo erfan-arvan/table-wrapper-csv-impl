@@ -83,7 +83,7 @@ public class CsvTableRow extends AbstractReportPageRow {
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof CsvTableRow)) return false;
@@ -94,13 +94,13 @@ public class CsvTableRow extends AbstractReportPageRow {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof CsvTableRow;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -109,7 +109,7 @@ public class CsvTableRow extends AbstractReportPageRow {
         return result;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public int getRowNum() {
         return this.rowNum;
     }

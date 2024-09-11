@@ -51,7 +51,7 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<RowAndIndex
         return dateTime.atZone(ZoneId.systemDefault()).toInstant();
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     public CsvCellDataAccessObject(final DateTimeFormatter dateTimeFormatter) {
         this.dateTimeFormatter = dateTimeFormatter;
     }

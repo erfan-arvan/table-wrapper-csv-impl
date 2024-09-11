@@ -76,20 +76,20 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
             return Objects.hashCode(getValue());
         }
 
-        @java.lang.SuppressWarnings("all")
+        
         public RowAndIndex(final String[] row, final int columnIndex) {
             this.row = row;
             this.columnIndex = columnIndex;
         }
 
-        @java.lang.SuppressWarnings("all")
+        
         public int getColumnIndex() {
             return this.columnIndex;
         }
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public boolean equals(final java.lang.Object o) {
         if (o == this) return true;
         if (!(o instanceof CsvTableCell)) return false;
@@ -101,13 +101,13 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
         return true;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     protected boolean canEqual(final java.lang.Object other) {
         return other instanceof CsvTableCell;
     }
 
     @java.lang.Override
-    @java.lang.SuppressWarnings("all")
+    
     public int hashCode() {
         final int PRIME = 59;
         int result = 1;
@@ -116,7 +116,7 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
         return result;
     }
 
-    @java.lang.SuppressWarnings("all")
+    
     RowAndIndex getRowAndIndex() {
         return this.rowAndIndex;
     }
