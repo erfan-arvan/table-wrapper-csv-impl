@@ -1,552 +1,124 @@
-+ PROJECT_PATH=../dataset/post_wpi_without_s_table-wrapper-csv-impl
++ PROJECT_PATH=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl
 + CF_BINARY=../scripts/tools/checker-framework-3.34.0/checker/bin/javac
-+ COMPILED_CLASSES_FOLDER=../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes
-+ LIB_FOLDER=../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib
-+ SRC_FILES=../dataset/post_wpi_without_s_table-wrapper-csv-impl/cf_srcs.txt
-+ CLASSPATH_DIR=../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ COMPILED_CLASSES_FOLDER=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classes
++ LIB_FOLDER=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib
++ SRC_FILES=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/cf_srcs.txt
++ CLASSPATH_DIR=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + echo 'CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac'
 CF_BINARY: ../scripts/tools/checker-framework-3.34.0/checker/bin/javac
-+ unzip_jars ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
-+ local lib_folder=../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib
-+ local extract_to=../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
-+ '[' -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath ']'
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip_jars ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
++ local lib_folder=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib
++ local extract_to=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
++ '[' -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath ']'
++ rm -rf ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
++ mkdir -p ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/apiguardian-api-1.1.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/apiguardian-api-1.1.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/byte-buddy-1.14.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/byte-buddy-1.14.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/byte-buddy-agent-1.14.1.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/byte-buddy-agent-1.14.1.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/checker-qual-3.42.0.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/checker-qual-3.42.0.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/equalsverifier-3.14.1.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/equalsverifier-3.14.1.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/junit-jupiter-5.9.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/jsr305-3.0.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/junit-jupiter-api-5.9.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/junit-jupiter-5.9.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/junit-jupiter-engine-5.9.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/junit-jupiter-api-5.9.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/junit-jupiter-params-5.9.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/junit-jupiter-engine-5.9.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/junit-platform-commons-1.9.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/junit-jupiter-params-5.9.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/junit-platform-engine-1.9.2.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/junit-platform-commons-1.9.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/lombok-1.18.32.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/junit-platform-engine-1.9.2.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/mockito-core-5.2.0.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/lombok-1.18.32.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/mockito-junit-jupiter-5.2.0.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/mockito-core-5.2.0.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/objenesis-3.3.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/mockito-junit-jupiter-5.2.0.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/opentest4j-1.2.0.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/objenesis-3.3.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/slf4j-api-2.0.7.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/opentest4j-1.2.0.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/table-wrapper-api-2023.1.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/slf4j-api-2.0.7.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
 + for jar_file in '"$lib_folder"/*.jar'
-+ unzip -o -q ../dataset/post_wpi_without_s_table-wrapper-csv-impl/lib/univocity-parsers-2.9.1.jar -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath
-+ find ../dataset/post_wpi_without_s_table-wrapper-csv-impl/src -name '*.java'
-+ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath @../dataset/post_wpi_without_s_table-wrapper-csv-impl/cf_srcs.txt'
-+ CLEAN_CMD='rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes'
-+ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath @../dataset/post_wpi_without_s_table-wrapper-csv-impl/cf_srcs.txt
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:100: warning: (override.param) $$ 7 $$ cellValuePredicate $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @Nullable Object> $$ @Initialized @NonNull CsvReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4) $$ @Initialized @NonNull ReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4) $$ ( 3813, 3850 ) $$ Incompatible parameter type for cellValuePredicate.
-                                 Predicate< Object> cellValuePredicate) {
-                                                    ^
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/table-wrapper-api-2023.1.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
++ for jar_file in '"$lib_folder"/*.jar'
++ unzip -o -q ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/lib/univocity-parsers-2.9.1.jar -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath
++ find ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/src -name '*.java'
++ BUILD_CMD='../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath @../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/cf_srcs.txt'
++ CLEAN_CMD='rm -rf ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classes'
++ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/classpath @../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/cf_srcs.txt
+../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:92: warning: (override.param) $$ 7 $$ cellValuePredicate $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @Nullable Object> $$ @Initialized @NonNull CsvReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4) $$ @Initialized @NonNull ReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4) $$ ( 3629, 3675 ) $$ Incompatible parameter type for cellValuePredicate.
+    public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn, @Nullable Predicate<Object> cellValuePredicate) {
+                                                                                                                       ^
   found   : @Initialized @NonNull Predicate<@Initialized @NonNull Object>
   required: @Initialized @NonNull Predicate<@Initialized @Nullable Object>
   Consequence: method in @Initialized @NonNull CsvReportPage
     @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4)
   cannot override method in @Initialized @NonNull ReportPage
     @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4)
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:90: warning: (return) $$ 2 $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 2887, 2907 ) $$ incompatible types in return.
+../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:93: warning: (return) $$ 2 $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 2854, 2874 ) $$ incompatible types in return.
                     return getCell(cellIndex++);
                                   ^
   type of expression: @Initialized @Nullable TableCell
   method return type: @Initialized @NonNull TableCell
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:36: warning: (assignment) $$ 2 $$ @Initialized @Nullable String $$ @UnknownInitialization @NonNull String $$ ( 1528, 1558 ) $$ incompatible types in assignment.
-        String cellValue = getCellValue(row, columnIndex);
-                                       ^
-  found   : @Initialized @Nullable String
-  required: @UnknownInitialization @NonNull String
-3 warnings
-+ WPITEMPDIR=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ WPIOUTDIR=build/whole-program-inference
-+ DEBUG=1
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ rm -f iteration1.diff iteration2.diff iteration3.diff iteration4.diff
-+ WPIITERATIONOUTPUTS=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations
-+ count=1
-+ :
-+ [[ 1 == 1 ]]
-+ SECONDS=0
-+ echo 'entering iteration 1'
-entering iteration 1
-+ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath @../dataset/post_wpi_without_s_table-wrapper-csv-impl/cf_srcs.txt
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:100: warning: (override.param) $$ 7 $$ cellValuePredicate $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @Nullable Object> $$ @Initialized @NonNull CsvReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4) $$ @Initialized @NonNull ReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4) $$ ( 3813, 3850 ) $$ Incompatible parameter type for cellValuePredicate.
-                                 Predicate< Object> cellValuePredicate) {
-                                                    ^
-  found   : @Initialized @NonNull Predicate<@Initialized @NonNull Object>
-  required: @Initialized @NonNull Predicate<@Initialized @Nullable Object>
-  Consequence: method in @Initialized @NonNull CsvReportPage
-    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4)
-  cannot override method in @Initialized @NonNull ReportPage
-    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4)
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:106: warning: (return) $$ 2 $$ @Initialized @Nullable CsvTableRow $$ @Initialized @NonNull CsvTableRow $$ ( 4040, 4103 ) $$ incompatible types in return.
-        return (i < 0 || i >= rows.length) ? null : CsvTableRow.of(rows[i], i);
-                                           ^
-  type of expression: @Initialized @Nullable CsvTableRow
-  method return type: @Initialized @NonNull CsvTableRow
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:48: warning: (return) $$ 2 $$ null (NullType) $$ @Initialized @NonNull TableCell $$ ( 1832, 1836 ) $$ incompatible types in return.
-            return null;
-                   ^
-  type of expression: null (NullType)
-  method return type: @Initialized @NonNull TableCell
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:60: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 2085, 2127 ) $$ incompatible types in return.
-        return (i < 0 || i >= row.length) ? null : row[i];
-                                          ^
-  type of expression: @Initialized @Nullable String
-  method return type: @Initialized @NonNull String
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:74: warning: (override.param) $$ 7 $$ value $$ @Initialized @NonNull Object $$ @Initialized @Nullable Object $$ @Initialized @NonNull CsvTableRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0) $$ @Initialized @NonNull ReportPageRow $$ @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0) $$ ( 2366, 2378 ) $$ Incompatible parameter type for value.
-    public boolean rowContains( Object value) {
-                                       ^
-  found   : @Initialized @NonNull Object
-  required: @Initialized @Nullable Object
-  Consequence: method in @Initialized @NonNull CsvTableRow
-    @Initialized @NonNull boolean rowContains(@Initialized @NonNull CsvTableRow this, @Initialized @NonNull Object p0)
-  cannot override method in @Initialized @NonNull ReportPageRow
-    @Initialized @NonNull boolean rowContains(@Initialized @NonNull ReportPageRow this, @Initialized @Nullable Object p0)
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:42: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1774, 1848 ) $$ incompatible types in return.
-        return (columnIndex >= 0) && (columnIndex < row.length) ? row[columnIndex] : null;
-                                                                ^
-  type of expression: @Initialized @Nullable String
-  method return type: @Initialized @NonNull String
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject.java:36: warning: (return) $$ 2 $$ @Initialized @Nullable String $$ @Initialized @NonNull String $$ ( 1580, 1636 ) $$ incompatible types in return.
-        return (cellIndex == null) ? null : row.getCellValue(cellIndex);
-                                   ^
-  type of expression: @Initialized @Nullable String
-  method return type: @Initialized @NonNull String
-7 warnings
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mkdir -p build/whole-program-inference
-++ diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out build/whole-program-inference
-++ true
-+ DIFF_RESULT='Only in build/whole-program-inference: com
-Only in build/whole-program-inference: org'
-+ [[ 1 == 1 ]]
-++ realpath iteration1.diff
-realpath: iteration1.diff: No such file or directory
-+ echo 'putting the diff for iteration 1 into '
-putting the diff for iteration 1 into 
-+ echo Only in build/whole-program-inference: com Only in build/whole-program-inference: org
-+ [[ Only in build/whole-program-inference: com
-Only in build/whole-program-inference: org != '' ]]
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mv build/whole-program-inference ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations/iteration1
-+ cp -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations/iteration1
-+ echo 'ending iteration 1, time taken: 3 seconds'
-ending iteration 1, time taken: 3 seconds
-+ echo
-
-+ (( count++ ))
-+ '[' 2 -eq 11 ']'
-+ :
-+ [[ 1 == 1 ]]
-+ SECONDS=0
-+ echo 'entering iteration 2'
-entering iteration 2
-+ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath @../dataset/post_wpi_without_s_table-wrapper-csv-impl/cf_srcs.txt
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/base/UnsafeAccess-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.base
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/base/UnsafeAccess-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.base.UnsafeAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AbstractLinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.cache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AbstractLinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.AbstractLinkedDeque
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AccessOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Imported type not found: com.github.benmanes.caffeine.cache.AccessOrderDeque.AccessOrder
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AccessOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.AccessOrderDeque
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Async-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field MAXIMUM_EXPIRY not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Async-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Async
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AsyncCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AsyncCacheLoader-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncCacheLoader
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/AsyncLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.AsyncLoadingCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field OFFSET not found: com.github.benmanes.caffeine.cache.BoundedBuffer
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: com.github.benmanes.caffeine.base.UnsafeAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedBuffer
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 130,col 1): Type not found: com.github.benmanes.caffeine.cache.BBHeader
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field ASYNC_EXPIRY not found: com.github.benmanes.caffeine.cache.Async
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Enclosing type of static field requireArgument not found: com.github.benmanes.caffeine.cache.Caffeine
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Enclosing type of static field requireState not found: com.github.benmanes.caffeine.cache.Caffeine
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field EDEN not found: com.github.benmanes.caffeine.cache.Node
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Enclosing type of static field PROBATION not found: com.github.benmanes.caffeine.cache.Node
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Enclosing type of static field PROTECTED not found: com.github.benmanes.caffeine.cache.Node
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 67,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncExpiry
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 68,col 1): Imported type not found: com.github.benmanes.caffeine.cache.LinkedDeque.PeekingIterator
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 69,col 1): Imported type not found: com.github.benmanes.caffeine.cache.References.InternalReference
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 70,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.StatsCounter
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 71,col 1): Imported type not found: com.google.errorprone.annotations.concurrent.GuardedBy
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 85,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/BoundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3707,col 1): Type not found: com.github.benmanes.caffeine.cache.BLCHeader
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Buffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.Buffer
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Buffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 97,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledBuffer
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 24,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.CacheStats
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Cache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.Cache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/CacheLoader-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 41,col 1): Type not found: com.github.benmanes.caffeine.cache.CacheLoader
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/CacheWriter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.CacheWriter
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/CacheWriter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 73,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledWriter
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncRemovalListener
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 40,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Async.AsyncWeigher
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 42,col 1): Imported type not found: com.github.benmanes.caffeine.cache.stats.ConcurrentStatsCounter
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Caffeine-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 132,col 1): Type not found: com.github.benmanes.caffeine.cache.Caffeine
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field UNSET_INT not found: com.github.benmanes.caffeine.cache.Caffeine
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 26,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Caffeine.Strength
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/CaffeineSpec-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 68,col 1): Type not found: com.github.benmanes.caffeine.cache.CaffeineSpec
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Expiry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: com.github.benmanes.caffeine.cache.Expiry
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/FrequencySketch-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.FrequencySketch
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LinkedDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 46,col 1): Type not found: com.github.benmanes.caffeine.cache.LinkedDeque
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 1): Type not found: com.github.benmanes.caffeine.cache.LoadingCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LocalAsyncCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 51,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalAsyncCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 41,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalAsyncLoadingCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 33,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LocalLoadingCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalLoadingCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/LocalManualCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.LocalManualCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Enclosing type of static field UNSAFE not found: com.github.benmanes.caffeine.base.UnsafeAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 17,col 1): Enclosing type of static field ceilingPowerOfTwo not found: com.github.benmanes.caffeine.cache.BoundedLocalCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 18,col 1): Enclosing type of static field REF_ARRAY_BASE not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 19,col 1): Enclosing type of static field REF_ELEMENT_SHIFT not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 20,col 1): Enclosing type of static field lvElement not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Enclosing type of static field soElement not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 37,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscGrowableArrayQueue
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 68,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscChunkedArrayQueue
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 101,col 1): Type not found: com.github.benmanes.caffeine.cache.MpscChunkedArrayQueueColdProducerFields
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 119,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad1
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 127,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueProducerFields
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 133,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad2
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 141,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueConsumerFields
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 151,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueuePad3
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 159,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueueColdProducerFields
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 169,col 1): Type not found: com.github.benmanes.caffeine.cache.BaseMpscLinkedArrayQueue
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 624,col 1): Type not found: com.github.benmanes.caffeine.cache.UnsafeRefArrayAccess
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Node-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: com.github.benmanes.caffeine.cache.WriteOrderDeque.WriteOrder
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Node-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 32,col 1): Type not found: com.github.benmanes.caffeine.cache.Node
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Policy-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 34,col 1): Type not found: com.github.benmanes.caffeine.cache.Policy
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/References-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.References
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/RemovalCause-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Type not found: com.github.benmanes.caffeine.cache.RemovalCause
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/RemovalListener-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 36,col 1): Type not found: com.github.benmanes.caffeine.cache.RemovalListener
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/SerializationProxy-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 30,col 1): Type not found: com.github.benmanes.caffeine.cache.SerializationProxy
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/StripedBuffer-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 38,col 1): Type not found: com.github.benmanes.caffeine.cache.StripedBuffer
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 26,col 1): Type not found: com.github.benmanes.caffeine.cache.Ticker
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 58,col 1): Type not found: com.github.benmanes.caffeine.cache.SystemTicker
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Ticker-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 68,col 1): Type not found: com.github.benmanes.caffeine.cache.DisabledTicker
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/TimerWheel-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 39,col 1): Type not found: com.github.benmanes.caffeine.cache.TimerWheel
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/UnboundedLocalCache-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 51,col 1): Type not found: com.github.benmanes.caffeine.cache.UnboundedLocalCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 31,col 1): Type not found: com.github.benmanes.caffeine.cache.Weigher
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 72,col 1): Type not found: com.github.benmanes.caffeine.cache.SingletonWeigher
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/Weigher-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 82,col 1): Type not found: com.github.benmanes.caffeine.cache.BoundedWeigher
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/WriteOrderDeque-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.WriteOrderDeque
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/WriteThroughEntry-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 27,col 1): Type not found: com.github.benmanes.caffeine.cache.WriteThroughEntry
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 21,col 1): Imported type not found: com.github.benmanes.caffeine.cache.Cache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 22,col 1): Imported type not found: com.github.benmanes.caffeine.cache.LoadingCache
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 23,col 1): Imported type not found: com.google.errorprone.annotations.Immutable
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 16,col 1): Package not found: com.github.benmanes.caffeine.cache.stats
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/CacheStats-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 57,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.CacheStats
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/GuardedStatsCounter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 28,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.GuardedStatsCounter
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/github/benmanes/caffeine/cache/stats/StatsCounter-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 29,col 1): Type not found: com.github.benmanes.caffeine.cache.stats.StatsCounter
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 3,col 1): Imported type not found: com.google.gson.JsonElement
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Imported type not found: com.google.gson.JsonObject
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 5,col 1): Imported type not found: org.jetbrains.annotations.NotNull
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 1,col 1): Package not found: com.namelessmc.java_api
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/Announcement-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 11,col 1): Type not found: com.namelessmc.java_api.Announcement
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 4,col 1): Imported type not found: org.jetbrains.annotations.Nullable
-warning: /Users/erfanarvan/Desktop/comparisonPaper/wpi-njr-debug/wpi/../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/com/namelessmc/java_api/ApiError-org.checkerframework.checker.nullness.KeyForSubchecker.ajava:(line 7,col 1): Type not found: com.namelessmc.java_api.ApiError
-100 warnings
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mkdir -p build/whole-program-inference
-++ diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out build/whole-program-inference
-++ true
-+ DIFF_RESULT='Only in ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out: com
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-35c35
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-58c58
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.NullnessChecker.ajava
-35c35
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-58c58
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-104c104
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.NullnessChecker.ajava
-104c104
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-48c48
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-53c53
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-76c76
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava
-48c48
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-53c53
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-76c76
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-61c61
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-66c66
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-91c91
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.NullnessChecker.ajava
-61c61
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-66c66
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-91c91
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableHelper-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableHelper-org.checkerframework.checker.nullness.NullnessChecker.ajava
-64c64
-<     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Predicate<String> equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Object expected) {
----
->     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Predicate<String> equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object expected) {
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-102c102
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-107c107
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-128c128
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.NullnessChecker.ajava
-102c102
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-107c107
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-128c128
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure'
-+ [[ 1 == 1 ]]
-++ realpath iteration2.diff
-realpath: iteration2.diff: No such file or directory
-+ echo 'putting the diff for iteration 2 into '
-putting the diff for iteration 2 into 
-+ echo Only in ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out: com diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 35c35 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 58c58 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.NullnessChecker.ajava 35c35 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 58c58 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 104c104 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.NullnessChecker.ajava 104c104 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 48c48 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 53c53 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 76c76 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava 48c48 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 53c53 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 76c76 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 61c61 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 66c66 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 91c91 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.NullnessChecker.ajava 61c61 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 66c66 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 91c91 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableHelper-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableHelper-org.checkerframework.checker.nullness.NullnessChecker.ajava 64c64 '<' static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Predicate<String>' 'equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.NonNull Object 'expected)' '{' --- '>' static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull 'Predicate<String>' 'equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized' @org.checkerframework.checker.nullness.qual.Nullable Object 'expected)' '{' diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava 102c102 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 107c107 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 128c128 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.NullnessChecker.ajava 102c102 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 107c107 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure 128c128 '<' @org.checkerframework.dataflow.qual.Impure --- '>' @org.checkerframework.dataflow.qual.Pure
-+ [[ Only in ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out: com
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-35c35
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-58c58
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvCellDataAccessObject-org.checkerframework.checker.nullness.NullnessChecker.ajava
-35c35
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-58c58
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-104c104
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvReportPage-org.checkerframework.checker.nullness.NullnessChecker.ajava
-104c104
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-48c48
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-53c53
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-76c76
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.NullnessChecker.ajava
-48c48
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-53c53
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-76c76
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-61c61
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-66c66
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-91c91
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableCell-org.checkerframework.checker.nullness.NullnessChecker.ajava
-61c61
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-66c66
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-91c91
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableHelper-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableHelper-org.checkerframework.checker.nullness.NullnessChecker.ajava
-64c64
-<     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Predicate<String> equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Object expected) {
----
->     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Predicate<String> equalsPredicate(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable Object expected) {
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.KeyForSubchecker.ajava
-102c102
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-107c107
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-128c128
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.NullnessChecker.ajava build/whole-program-inference/org/spacious_team/table_wrapper/csv/CsvTableRow-org.checkerframework.checker.nullness.NullnessChecker.ajava
-102c102
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-107c107
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure
-128c128
-<     @org.checkerframework.dataflow.qual.Impure
----
->     @org.checkerframework.dataflow.qual.Pure != '' ]]
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mv build/whole-program-inference ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations/iteration2
-+ cp -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out/org ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-iterations/iteration2
-+ echo 'ending iteration 2, time taken: 4 seconds'
-ending iteration 2, time taken: 4 seconds
-+ echo
-
-+ (( count++ ))
-+ '[' 3 -eq 11 ']'
-+ :
-+ [[ 1 == 1 ]]
-+ SECONDS=0
-+ echo 'entering iteration 3'
-entering iteration 3
-+ ../scripts/tools/checker-framework-3.34.0/checker/bin/javac -processor org.checkerframework.checker.nullness.NullnessChecker -AassumePure -Adetailedmsgtext -Aajava=../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out -Ainfer=ajava -Awarns -AshowPrefixInWarningMessages -J-Xmx32G -Xmaxerrs 10000 -g -d ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes -cp ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classpath @../dataset/post_wpi_without_s_table-wrapper-csv-impl/cf_srcs.txt
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvReportPage.java:100: warning: (override.param) $$ 7 $$ cellValuePredicate $$ @Initialized @NonNull Predicate<@Initialized @NonNull Object> $$ @Initialized @NonNull Predicate<@Initialized @Nullable Object> $$ @Initialized @NonNull CsvReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4) $$ @Initialized @NonNull ReportPage $$ @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4) $$ ( 3813, 3850 ) $$ Incompatible parameter type for cellValuePredicate.
-                                 Predicate< Object> cellValuePredicate) {
-                                                    ^
-  found   : @Initialized @NonNull Predicate<@Initialized @NonNull Object>
-  required: @Initialized @NonNull Predicate<@Initialized @Nullable Object>
-  Consequence: method in @Initialized @NonNull CsvReportPage
-    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull CsvReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @NonNull Object> p4)
-  cannot override method in @Initialized @NonNull ReportPage
-    @Initialized @NonNull TableCellAddress find(@Initialized @NonNull ReportPage this, @Initialized @NonNull int p0, @Initialized @NonNull int p1, @Initialized @NonNull int p2, @Initialized @NonNull int p3, @Initialized @NonNull Predicate<@Initialized @Nullable Object> p4)
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableRow.java:90: warning: (return) $$ 2 $$ @Initialized @Nullable TableCell $$ @Initialized @NonNull TableCell $$ ( 2887, 2907 ) $$ incompatible types in return.
-                    return getCell(cellIndex++);
-                                  ^
-  type of expression: @Initialized @Nullable TableCell
-  method return type: @Initialized @NonNull TableCell
-../dataset/post_wpi_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTableCell.java:36: warning: (assignment) $$ 2 $$ @Initialized @Nullable String $$ @UnknownInitialization @NonNull String $$ ( 1528, 1558 ) $$ incompatible types in assignment.
-        String cellValue = getCellValue(row, columnIndex);
-                                       ^
-  found   : @Initialized @Nullable String
-  required: @UnknownInitialization @NonNull String
-3 warnings
-+ rm -rf ../dataset/post_wpi_without_s_table-wrapper-csv-impl/classes
-+ mkdir -p ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out
-+ mkdir -p build/whole-program-inference
-++ diff -r ../dataset/post_wpi_without_s_table-wrapper-csv-impl/wpi-out build/whole-program-inference
-+ DIFF_RESULT=
-+ [[ 1 == 1 ]]
-++ realpath iteration3.diff
-realpath: iteration3.diff: No such file or directory
-+ echo 'putting the diff for iteration 3 into '
-putting the diff for iteration 3 into 
-+ echo
-+ [[ '' != '' ]]
-+ break
+2 warnings
+An exception has occurred in the compiler (11.0.22). Please file a bug against the Java compiler via the Java bug reporting page (https://bugreport.java.com) after checking the Bug Database (https://bugs.java.com) for duplicates. Include your program and the following diagnostic in your report. Thank you.
+com.sun.tools.javac.util.ClientCodeException: java.lang.Error: Problem while parsing ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:832)
+	at jdk.compiler/com.sun.tools.javac.api.MultiTaskListener.finished(MultiTaskListener.java:132)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1414)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.flow(JavaCompiler.java:1371)
+	at jdk.compiler/com.sun.tools.javac.main.JavaCompiler.compile(JavaCompiler.java:973)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:311)
+	at jdk.compiler/com.sun.tools.javac.main.Main.compile(Main.java:170)
+	at jdk.compiler/com.sun.tools.javac.Main.compile(Main.java:57)
+	at jdk.compiler/com.sun.tools.javac.Main.main(Main.java:43)
+Caused by: java.lang.Error: Problem while parsing ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/wpi-out/org/spacious_team/table_wrapper/csv/CsvTable-org.checkerframework.checker.nullness.KeyForSubchecker.ajava that corresponds to ../dataset/post_nullgtn_without_s_table-wrapper-csv-impl/src/main/java/org/spacious_team/table_wrapper/csv/CsvTable.java
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1015)
+	at org.checkerframework.framework.type.GenericAnnotatedTypeFactory.setRoot(GenericAnnotatedTypeFactory.java:449)
+	at org.checkerframework.common.basetype.BaseTypeVisitor.setRoot(BaseTypeVisitor.java:387)
+	at org.checkerframework.framework.source.SourceChecker.setRoot(SourceChecker.java:685)
+	at org.checkerframework.common.basetype.BaseTypeChecker.setRoot(BaseTypeChecker.java:167)
+	at org.checkerframework.framework.source.SourceChecker.typeProcess(SourceChecker.java:1074)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:559)
+	at org.checkerframework.common.basetype.BaseTypeChecker.typeProcess(BaseTypeChecker.java:552)
+	at org.checkerframework.javacutil.AbstractTypeProcessor$AttributionTaskListener.finished(AbstractTypeProcessor.java:188)
+	at jdk.compiler/com.sun.tools.javac.api.ClientCodeWrapper$WrappedTaskListener.finished(ClientCodeWrapper.java:828)
+	... 8 more
+Caused by: org.checkerframework.javacutil.BugInCF: org.checkerframework.framework.stub.AnnotationFileParser.AjavaAnnotationCollectorVisitor.visitLists(import javax.annotation.Nullable;
+,import org.spacious_team.table_wrapper.api.AbstractReportPage;
+,import org.spacious_team.table_wrapper.api.AbstractTable;
+,import org.spacious_team.table_wrapper.api.CellDataAccessObject;
+,import org.spacious_team.table_wrapper.api.Table;
+,import org.spacious_team.table_wrapper.api.TableCellRange;
+,import org.spacious_team.table_wrapper.api.TableHeaderColumn;
+ [size 7], [import org.spacious_team.table_wrapper.api.AbstractReportPage;
+, import org.spacious_team.table_wrapper.api.AbstractTable;
+, import org.spacious_team.table_wrapper.api.CellDataAccessObject;
+, import org.spacious_team.table_wrapper.api.Table;
+, import org.spacious_team.table_wrapper.api.TableCellRange;
+, import org.spacious_team.table_wrapper.api.TableHeaderColumn;
+] [size 6])
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitLists(JointJavacJavaParserVisitor.java:2297)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:668)
+	at org.checkerframework.framework.ajava.JointJavacJavaParserVisitor.visitCompilationUnit(JointJavacJavaParserVisitor.java:189)
+	at jdk.compiler/com.sun.tools.javac.tree.JCTree$JCCompilationUnit.accept(JCTree.java:591)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processCompilationUnit(AnnotationFileParser.java:825)
+	at org.checkerframework.framework.stub.AnnotationFileParser.processStubUnit(AnnotationFileParser.java:790)
+	at org.checkerframework.framework.stub.AnnotationFileParser.process(AnnotationFileParser.java:779)
+	at org.checkerframework.framework.stub.AnnotationFileParser.parseAjavaFile(AnnotationFileParser.java:696)
+	at org.checkerframework.framework.stub.AnnotationFileElementTypes.parseAjavaFileWithTree(AnnotationFileElementTypes.java:286)
+	at org.checkerframework.framework.type.AnnotatedTypeFactory.setRoot(AnnotatedTypeFactory.java:1013)
+	... 17 more
+Caused by: java.lang.Throwable
+	at org.checkerframework.javacutil.BugInCF.<init>(BugInCF.java:38)
+	... 27 more

@@ -17,8 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.TableCellAddress;
 import java.util.Objects;
 import java.util.function.Predicate;
@@ -26,11 +25,12 @@ import static lombok.AccessLevel.PRIVATE;
 import static org.spacious_team.table_wrapper.api.TableCellAddress.NOT_FOUND;
 
 final class CsvTableHelper {
-    static TableCellAddress find(String[][] table,  Object expected, int startRow, int endRow, int startColumn, int endColumn) {
+
+    static TableCellAddress find(String[][] table, Object expected, int startRow, int endRow, int startColumn, int endColumn) {
         return find(table, startRow, endRow, startColumn, endColumn, equalsPredicate(expected));
     }
 
-    static TableCellAddress find(String[][] table, int startRow, int endRow, int startColumn, int endColumn, Predicate< String> predicate) {
+    static TableCellAddress find(String[][] table, int startRow, int endRow, int startColumn, int endColumn, Predicate<String> predicate) {
         startRow = Math.max(0, startRow);
         endRow = Math.min(endRow, table.length);
         for (int rowNum = startRow; rowNum < endRow; rowNum++) {
@@ -43,7 +43,7 @@ final class CsvTableHelper {
         return NOT_FOUND;
     }
 
-    static TableCellAddress find(String[] row, int rowNum, int startColumn, int endColumn, Predicate< String> predicate) {
+    static TableCellAddress find(String[] row, int rowNum, int startColumn, int endColumn, Predicate<String> predicate) {
         startColumn = Math.max(0, startColumn);
         endColumn = Math.min(endColumn, row.length);
         for (int i = startColumn; i < endColumn; i++) {
@@ -55,7 +55,7 @@ final class CsvTableHelper {
         return NOT_FOUND;
     }
 
-    static Predicate< String> equalsPredicate( Object expected) {
+    static Predicate<String> equalsPredicate(Object expected) {
         if (expected == null) {
             return Objects::isNull;
         }

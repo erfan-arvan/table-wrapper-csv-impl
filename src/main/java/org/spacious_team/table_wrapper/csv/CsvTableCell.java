@@ -17,14 +17,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractTableCell;
 import org.spacious_team.table_wrapper.api.EmptyTableCell;
 import org.spacious_team.table_wrapper.api.TableCell;
 
 public class CsvTableCell extends AbstractTableCell<String, CsvCellDataAccessObject> {
+
     private final int columnIndex;
+
     private final String value;
 
     public static TableCell of(String[] row, int columnIndex) {
@@ -32,12 +33,11 @@ public class CsvTableCell extends AbstractTableCell<String, CsvCellDataAccessObj
     }
 
     public static TableCell of(String[] row, int columnIndex, CsvCellDataAccessObject dao) {
-        
         String cellValue = getCellValue(row, columnIndex);
         return cellValue == null ? EmptyTableCell.of(columnIndex) : new CsvTableCell(cellValue, columnIndex, dao);
     }
 
-    
+    @Nullable
     private static String getCellValue(String[] row, int columnIndex) {
         return (columnIndex >= 0) && (columnIndex < row.length) ? row[columnIndex] : null;
     }
@@ -62,15 +62,21 @@ public class CsvTableCell extends AbstractTableCell<String, CsvCellDataAccessObj
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof CsvTableCell)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof CsvTableCell))
+            return false;
         final CsvTableCell other = (CsvTableCell) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (!super.equals(o)) return false;
-        if (this.getColumnIndex() != other.getColumnIndex()) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (!super.equals(o))
+            return false;
+        if (this.getColumnIndex() != other.getColumnIndex())
+            return false;
         final java.lang.Object this$value = this.value;
         final java.lang.Object other$value = other.value;
-        if (this$value == null ? other$value != null : !this$value.equals(other$value)) return false;
+        if (this$value == null ? other$value != null : !this$value.equals(other$value))
+            return false;
         return true;
     }
 

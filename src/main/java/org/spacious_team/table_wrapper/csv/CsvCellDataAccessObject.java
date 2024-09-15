@@ -17,8 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.CellDataAccessObject;
 import org.spacious_team.table_wrapper.api.InstantParser;
 import java.time.Instant;
@@ -26,27 +25,26 @@ import java.time.LocalTime;
 import static java.util.Objects.requireNonNull;
 
 public class CsvCellDataAccessObject implements CellDataAccessObject<String, CsvTableRow> {
+
     public static final CsvCellDataAccessObject INSTANCE = CsvCellDataAccessObject.of(InstantParser.builder().defaultTime(LocalTime.NOON).build());
+
     private final InstantParser instantParser;
 
     @Override
-    
+    @Nullable
     public String getCell(CsvTableRow row, Integer cellIndex) {
         //noinspection ConstantConditions
         return (cellIndex == null) ? null : row.getCellValue(cellIndex);
     }
 
     @Override
-    
-    public String getValue( String cell) {
+    public String getValue(String cell) {
         return cell;
     }
 
     @Override
-    public Instant getInstantValue( String cell) {
-        
+    public Instant getInstantValue(String cell) {
         String value = getValue(cell);
-        
         String nonNullValue = requireNonNull(value, "Not an instant");
         return instantParser.parseInstant(nonNullValue);
     }
@@ -60,13 +58,17 @@ public class CsvCellDataAccessObject implements CellDataAccessObject<String, Csv
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof CsvCellDataAccessObject)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof CsvCellDataAccessObject))
+            return false;
         final CsvCellDataAccessObject other = (CsvCellDataAccessObject) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
         final java.lang.Object this$instantParser = this.instantParser;
         final java.lang.Object other$instantParser = other.instantParser;
-        if (this$instantParser == null ? other$instantParser != null : !this$instantParser.equals(other$instantParser)) return false;
+        if (this$instantParser == null ? other$instantParser != null : !this$instantParser.equals(other$instantParser))
+            return false;
         return true;
     }
 

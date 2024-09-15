@@ -15,16 +15,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 import org.checkerframework.checker.nullness.qual.NonNull;
-import org.checkerframework.checker.nullness.qual.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractReportPage;
 import org.spacious_team.table_wrapper.api.TableCellAddress;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -34,7 +31,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.function.Predicate;
-
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
@@ -70,13 +66,10 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
     /**
      * @implSpec Closes inputStream
      */
-    private static String[]  [] readRows(InputStream inputStream,
-                                                 Charset charset,
-                                                 CsvParserSettings csvParserSettings) throws IOException {
+    private static String[][] readRows(InputStream inputStream, Charset charset, CsvParserSettings csvParserSettings) throws IOException {
         try (Reader inputReader = new InputStreamReader(inputStream, charset)) {
             CsvParser parser = new CsvParser(csvParserSettings);
-            return parser.parseAll(inputReader)
-                    .toArray(new String[0][]);
+            return parser.parseAll(inputReader).toArray(new String[0][]);
         }
     }
 
@@ -96,13 +89,13 @@ public class CsvReportPage extends AbstractReportPage<CsvTableRow> {
     }
 
     @Override
-    public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn,
-                                 Predicate< Object> cellValuePredicate) {
+    public TableCellAddress find(int startRow, int endRow, int startColumn, int endColumn, @Nullable Predicate<Object> cellValuePredicate) {
         return CsvTableHelper.find(rows, startRow, endRow, startColumn, endColumn, cellValuePredicate::test);
     }
 
     @Override
-    public  CsvTableRow getRow(int i) {
+    @Nullable
+    public CsvTableRow getRow(int i) {
         return (i < 0 || i >= rows.length) ? null : CsvTableRow.of(rows[i], i);
     }
 

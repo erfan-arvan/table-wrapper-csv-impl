@@ -15,9 +15,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import java.io.FilterInputStream;
 
 class CloseIgnoringInputStream extends FilterInputStream {

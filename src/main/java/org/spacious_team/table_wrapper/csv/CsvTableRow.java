@@ -17,8 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
-import org.checkerframework.checker.nullness.qual.Nullable;
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractReportPageRow;
 import org.spacious_team.table_wrapper.api.TableCell;
 import java.util.Iterator;
@@ -27,8 +26,11 @@ import static org.spacious_team.table_wrapper.api.TableCellAddress.NOT_FOUND;
 import static org.spacious_team.table_wrapper.csv.CsvTableHelper.equalsPredicate;
 
 public class CsvTableRow extends AbstractReportPageRow {
+
     private final String[] row;
+
     private final int rowNum;
+
     private final TableCell[] cellsCache;
 
     public static CsvTableRow of(String[] row, int rowNum) {
@@ -42,7 +44,6 @@ public class CsvTableRow extends AbstractReportPageRow {
     }
 
     @Override
-    
     public TableCell getCell(int i) {
         if (i < 0 || i >= row.length) {
             return null;
@@ -55,7 +56,7 @@ public class CsvTableRow extends AbstractReportPageRow {
         return cell;
     }
 
-    
+    @Nullable
     String getCellValue(int i) {
         return (i < 0 || i >= row.length) ? null : row[i];
     }
@@ -71,20 +72,22 @@ public class CsvTableRow extends AbstractReportPageRow {
     }
 
     @Override
-    public boolean rowContains( Object value) {
+    public boolean rowContains(Object value) {
         return CsvTableHelper.find(row, rowNum, 0, row.length, equalsPredicate(value)) != NOT_FOUND;
     }
 
     @Override
-    public Iterator< TableCell> iterator() {
-        return new Iterator< TableCell>() {
+    public Iterator<TableCell> iterator() {
+        return new Iterator<TableCell>() {
+
             private int cellIndex = 0;
+
             @Override
             public boolean hasNext() {
                 return cellIndex < row.length;
             }
+
             @Override
-            
             public TableCell next() {
                 if (hasNext()) {
                     return getCell(cellIndex++);
@@ -103,12 +106,17 @@ public class CsvTableRow extends AbstractReportPageRow {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof CsvTableRow)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof CsvTableRow))
+            return false;
         final CsvTableRow other = (CsvTableRow) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (this.getRowNum() != other.getRowNum()) return false;
-        if (!java.util.Arrays.deepEquals(this.row, other.row)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (this.getRowNum() != other.getRowNum())
+            return false;
+        if (!java.util.Arrays.deepEquals(this.row, other.row))
+            return false;
         return true;
     }
 

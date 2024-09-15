@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractReportPage;
 import org.spacious_team.table_wrapper.api.AbstractTable;
 import org.spacious_team.table_wrapper.api.CellDataAccessObject;
@@ -26,6 +26,7 @@ import org.spacious_team.table_wrapper.api.TableCellRange;
 import org.spacious_team.table_wrapper.api.TableHeaderColumn;
 
 public class CsvTable extends AbstractTable<CsvTableRow, String> {
+
     private CellDataAccessObject<String, CsvTableRow> cellDataAccessObject = CsvCellDataAccessObject.INSTANCE;
 
     protected <T extends Enum<T> & TableHeaderColumn> CsvTable(AbstractReportPage<CsvTableRow> reportPage, String tableName, TableCellRange tableRange, Class<T> headerDescription, int headersRowCount) {
@@ -50,14 +51,19 @@ public class CsvTable extends AbstractTable<CsvTableRow, String> {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof CsvTable)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof CsvTable))
+            return false;
         final CsvTable other = (CsvTable) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
-        if (!super.equals(o)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
+        if (!super.equals(o))
+            return false;
         final java.lang.Object this$cellDataAccessObject = this.getCellDataAccessObject();
         final java.lang.Object other$cellDataAccessObject = other.getCellDataAccessObject();
-        if (this$cellDataAccessObject == null ? other$cellDataAccessObject != null : !this$cellDataAccessObject.equals(other$cellDataAccessObject)) return false;
+        if (this$cellDataAccessObject == null ? other$cellDataAccessObject != null : !this$cellDataAccessObject.equals(other$cellDataAccessObject))
+            return false;
         return true;
     }
 
