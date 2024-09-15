@@ -15,15 +15,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractTableFactory;
 import org.spacious_team.table_wrapper.api.ReportPage;
 import org.spacious_team.table_wrapper.api.Table;
 import org.spacious_team.table_wrapper.api.TableCellRange;
 import org.spacious_team.table_wrapper.api.TableColumnDescription;
-
 
 public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
 
@@ -32,16 +30,7 @@ public class CsvTableFactory extends AbstractTableFactory<CsvReportPage> {
     }
 
     @Override
-    public Table create(ReportPage reportPage,
-                        String tableName,
-                        TableCellRange tableRange,
-                        Class<? extends TableColumnDescription> headerDescription,
-                        int headersRowCount) {
-        return new CsvTable(
-                cast(reportPage),
-                tableName,
-                tableRange,
-                headerDescription,
-                headersRowCount);
+    public Table create(ReportPage reportPage, String tableName, TableCellRange tableRange, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {
+        return new CsvTable(cast(reportPage), tableName, tableRange, headerDescription, headersRowCount);
     }
 }

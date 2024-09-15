@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
-import lombok.Getter;
-import org.spacious_team.table_wrapper.api.AbstractReportPageRow;
-import org.spacious_team.table_wrapper.api.TableCell;
+import javax.annotation.Nullable;import org.spacious_team.table_wrapper.api.TableCell;
 
 import java.util.Iterator;
 

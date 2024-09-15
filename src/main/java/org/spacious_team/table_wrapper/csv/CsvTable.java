@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractReportPage;
 import org.spacious_team.table_wrapper.api.AbstractTable;
 import org.spacious_team.table_wrapper.api.CellDataAccessObject;
@@ -26,6 +26,7 @@ import org.spacious_team.table_wrapper.api.TableCellRange;
 import org.spacious_team.table_wrapper.api.TableColumnDescription;
 
 public class CsvTable extends AbstractTable<CsvTableRow> {
+
     private final CellDataAccessObject<?, CsvTableRow> cellDataAccessObject = CsvCellDataAccessObject.INSTANCE;
 
     protected CsvTable(AbstractReportPage<CsvTableRow> reportPage, String tableName, TableCellRange tableRange, Class<? extends TableColumnDescription> headerDescription, int headersRowCount) {

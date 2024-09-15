@@ -27,7 +27,6 @@ class DateTimeFormatParser {
     // internal calculated unique key -> date-time format
     private static final @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull Map<Integer, DateTimeFormatter> dateTimeFormatters = new ConcurrentHashMap<>();
 
-    @org.checkerframework.checker.nullness.qual.EnsuresNonNull({ "#1" })
     @org.checkerframework.dataflow.qual.Impure
     static @org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.NonNull DateTimeFormatter getFor(@org.checkerframework.checker.initialization.qual.Initialized @org.checkerframework.checker.nullness.qual.Nullable String dateTime) {
         return (dateTime.length() == 10) ? getForDate(dateTime) : getForDateTime(dateTime);

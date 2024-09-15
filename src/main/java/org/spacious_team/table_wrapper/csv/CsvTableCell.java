@@ -17,12 +17,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 package org.spacious_team.table_wrapper.csv;
-
+import javax.annotation.Nullable;
 import org.spacious_team.table_wrapper.api.AbstractTableCell;
 import java.util.Objects;
 import static lombok.AccessLevel.PACKAGE;
 
 public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
+
     private final RowAndIndex rowAndIndex;
 
     public static CsvTableCell of(String[] row, int columnIndex) {
@@ -39,11 +40,13 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
         return rowAndIndex.getColumnIndex();
     }
 
-
     static final class RowAndIndex {
+
         private final String[] row;
+
         private final int columnIndex;
 
+        @Nullable
         String getValue() {
             return checkIndex() ? row[columnIndex] : null;
         }
@@ -83,13 +86,17 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
     @java.lang.Override
     @java.lang.SuppressWarnings("all")
     public boolean equals(final java.lang.Object o) {
-        if (o == this) return true;
-        if (!(o instanceof CsvTableCell)) return false;
+        if (o == this)
+            return true;
+        if (!(o instanceof CsvTableCell))
+            return false;
         final CsvTableCell other = (CsvTableCell) o;
-        if (!other.canEqual((java.lang.Object) this)) return false;
+        if (!other.canEqual((java.lang.Object) this))
+            return false;
         final java.lang.Object this$rowAndIndex = this.getRowAndIndex();
         final java.lang.Object other$rowAndIndex = other.getRowAndIndex();
-        if (this$rowAndIndex == null ? other$rowAndIndex != null : !this$rowAndIndex.equals(other$rowAndIndex)) return false;
+        if (this$rowAndIndex == null ? other$rowAndIndex != null : !this$rowAndIndex.equals(other$rowAndIndex))
+            return false;
         return true;
     }
 

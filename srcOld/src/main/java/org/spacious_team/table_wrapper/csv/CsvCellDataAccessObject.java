@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
-import lombok.Getter;
-import lombok.Setter;
-import org.spacious_team.table_wrapper.api.CellDataAccessObject;
+import javax.annotation.Nullable;import org.spacious_team.table_wrapper.api.CellDataAccessObject;
 import org.spacious_team.table_wrapper.csv.CsvTableCell.RowAndIndex;
 
 import java.time.Instant;

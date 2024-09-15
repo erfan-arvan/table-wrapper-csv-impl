@@ -27,7 +27,7 @@ public class CsvTableCell extends AbstractTableCell<CsvTableCell.RowAndIndex> {
 
     private final  RowAndIndex rowAndIndex;
 
-    @org.checkerframework.dataflow.qual.Impure
+    @org.checkerframework.dataflow.qual.Pure
     public static  CsvTableCell of( String  [] row,   int columnIndex) {
         return new CsvTableCell(new RowAndIndex(row, columnIndex));
     }

@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.ToString;
+import javax.annotation.Nullable;import lombok.ToString;
 import org.spacious_team.table_wrapper.api.AbstractReportPage;
 import org.spacious_team.table_wrapper.api.AbstractTable;
 import org.spacious_team.table_wrapper.api.CellDataAccessObject;

@@ -17,10 +17,7 @@
  */
 
 package org.spacious_team.table_wrapper.csv;
-
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import javax.annotation.Nullable;import lombok.RequiredArgsConstructor;
 import org.spacious_team.table_wrapper.api.AbstractTableCell;
 
 import java.util.Objects;
